@@ -1,1 +1,23 @@
-<h1>关西走你 · 测试页</h1>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fbf7f3"><meta name="apple-mobile-web-app-capable" content="yes">
+<title>关西走你 · 随身旅行手册</title>
+<link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./assets/icon.svg"><link rel="apple-touch-icon" href="./assets/icon.png">
+<link rel="stylesheet" href="./style.css"><script type="module" src="./app.js"></script>
+</head>
+<body>
+<header class="mast"><div class="wrap mast-inner">
+  <div><div class="eyebrow">🍃 我的关西旅行手账</div><div class="brand">关西走你<span> ✧</span></div></div>
+  <div class="stamp"><span aria-hidden="true">🍁</span><strong>11.11–20</strong></div>
+</div></header>
+<main class="wrap" id="main"></main>
+<nav class="bar" aria-label="主要页面"><div class="wrap nav"><button data-page="trip"><span aria-hidden="true">🗺️</span>行程</button><button data-page="bookings"><span aria-hidden="true">🎟️</span>预约</button><button data-page="ledger"><span aria-hidden="true">🪙</span>记账</button></div></nav>
+<dialog id="expense"><form id="expense-form"><div class="row"><h2 id="form-title">记一笔</h2><button class="plain" type="button" id="close-form">关闭</button></div>
+<label>金额（日元）<input name="amount" type="number" inputmode="numeric" min="1" max="999999999" step="1" required></label>
+<div class="form-grid"><label>日期<input name="date" type="date" min="2026-11-11" max="2026-11-20" required></label><label>分类<select name="category" required></select></label></div>
+<label>商家<input name="merchant" maxlength="100" placeholder="选填"></label><label>备注<input name="note" maxlength="200" placeholder="选填"></label>
+<button class="primary" type="submit">保存到这部手机</button></form></dialog>
+<div id="notice" role="status" aria-live="polite"></div>
+</body></html>
